@@ -2,7 +2,7 @@ import { experienceData } from "../data/eperience";
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 bg-[#050D18]">
+    <section id="experience" className="pt-24 bg-[#050D18]">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">

@@ -1,36 +1,37 @@
 const educationData = [
   {
-    degree: "BS in Data Science",
-    institution: "IIT Madras",
-    duration: "2025 - Present",
+    degree: "BS in Data Science and Applications",
+    institution: "Indian Institute of Technology Madras",
+    duration: "May 2025 - Present",
     description:
-      "Currently pursuing the Foundation Level in the IIT Madras BS Degree Program in Data Science and Applications.",
+      "Learning Python, Mathematics, Statistics, Machine Learning, and Generative AI, with a focus on developing analytical thinking and building intelligent, data-driven solutions.",
   },
   {
-    degree: "Bachelor of Engineering",
-    institution: "Computer Engineering",
-    duration: "2021 - 2025",
+    degree: "BE in Computer Science and Engineering (Dropout)",
+    institution: "Dr. Babasaheb Ambedkar Marathwada University",
+    duration: "Jun 2023 - May 2025 ",
     description:
-      "Studied core computer science subjects including programming, databases, software engineering, and web technologies.",
+      "Studied core computer science subjects including programming, data structures, computer networks and web technologies.",
   },
   {
-    degree: "Higher Secondary (12th)",
+    degree: "Higher Secondary (12th) - Grade A",
     institution: "Maharashtra State Board",
-    duration: "2019 - 2021",
+    duration: "2021 - 2022",
     description:
-      "Completed Higher Secondary Education with a focus on Science and Mathematics.",
+      "Completed Higher Secondary Education with a focus on Science and Mathematics from Maulana Azad College, Aurangabad",
   },
   {
-    degree: "Secondary School (10th)",
+    degree: "Secondary School (10th) - 80%",
     institution: "Maharashtra State Board",
-    duration: "2018 - 2019",
-    description: "Completed Secondary School Education.",
+    duration: "2019 - 20",
+    description:
+      "Completed Secondary School Education from Baliram Patil Vidyalaya, Aurangabad",
   },
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-24">
+    <section id="education" className="pt-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Heading */}
         <div className="mb-16 text-center">

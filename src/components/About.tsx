@@ -20,25 +20,6 @@ const About = () => {
     },
   ];
 
-  const personalInfo = [
-    {
-      title: "Name",
-      value: "Abdullah Ahmed",
-    },
-    {
-      title: "Location",
-      value: "India",
-    },
-    {
-      title: "Email",
-      value: "abdullah@example.com",
-    },
-    {
-      title: "Role",
-      value: "React Native Developer",
-    },
-  ];
-
   return (
     <section id="about" className="pt-28">
       <div className="mx-auto max-w-7xl px-6">
@@ -76,26 +57,6 @@ const About = () => {
 
           {/* Right */}
           <div className="space-y-6">
-            {/* Personal Info
-            <div className="rounded-3xl border border-white/10 bg-[#08111F] p-8">
-              <h3 className="mb-6 text-xl font-semibold">
-                Personal Information
-              </h3>
-
-              <div className="space-y-4">
-                {personalInfo.map((item) => (
-                  <div
-                    key={item.title}
-                    className="flex justify-between border-b border-white/5 pb-3"
-                  >
-                    <span className="text-gray-500">{item.title}</span>
-
-                    <span className="font-medium text-white">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
             {/* Stats */}
             <div className="grid grid-cols-2 gap-5">
               {stats.map((stat) => (

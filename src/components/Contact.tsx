@@ -2,7 +2,7 @@ import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-28">
+    <section id="contact" className="relative pt-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
