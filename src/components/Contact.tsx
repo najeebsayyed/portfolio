@@ -1,6 +1,8 @@
+import { useForm, ValidationError } from "@formspree/react";
 import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xeeborqy");
   return (
     <section id="contact" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -72,44 +74,72 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
           {/* Contact Form */}
+
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-            <form className="space-y-6">
-              <div className="grid gap-6 md:grid-cols-2">
+            {state.succeeded ? (
+              <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-6 text-center">
+                <h3 className="mb-2 text-xl font-semibold text-emerald-400">
+                  Message Sent!
+                </h3>
+                <p className="text-slate-300">
+                  Thanks for reaching out. I'll get back to you soon.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    className="rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
+                  />{" "}
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                    className="rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
+                  />
+                </div>
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-400"
+                />
                 <input
                   type="text"
-                  placeholder="Your Name"
-                  className="rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                  className="w-full rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
                 />
-
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
+                <textarea
+                  rows={7}
+                  name="message"
+                  placeholder="Your Message..."
+                  required
+                  className="w-full resize-none rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
                 />
-              </div>
-
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
-              />
-
-              <textarea
-                rows={7}
-                placeholder="Your Message..."
-                className="w-full resize-none rounded-xl border border-white/10 bg-[#08111F] px-5 py-4 text-white outline-none transition focus:border-emerald-400"
-              />
-
-              <button
-                type="submit"
-                className="flex items-center gap-2 rounded-xl bg-emerald-400 px-8 py-4 font-semibold text-slate-900 transition hover:scale-105"
-              >
-                Send Message
-                <FiSend />
-              </button>
-            </form>
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-400"
+                />
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="flex items-center gap-2 rounded-xl bg-emerald-400 px-8 py-4 font-semibold text-slate-900 transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  {state.submitting ? "Sending..." : "Send Message"}
+                  <FiSend />
+                </button>
+              </form>
+            )}{" "}
           </div>
         </div>
       </div>
