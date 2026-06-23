@@ -2,7 +2,7 @@ import { skills } from "../data/skills";
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className="pt-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -71,7 +71,7 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Stats
         <div className="mt-16 grid gap-6 text-center sm:grid-cols-3">
           <div className="rounded-2xl bg-[#08111F] p-6">
             <h3 className="text-4xl font-bold text-emerald-400">10+</h3>
@@ -87,7 +87,7 @@ const Skills = () => {
             <h3 className="text-4xl font-bold text-emerald-400">1+</h3>
             <p className="mt-2 text-gray-400">Years Learning</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

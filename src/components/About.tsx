@@ -5,13 +5,15 @@ const About = () => {
       label: "Projects Built",
     },
     {
+      value: "2+",
+      label: "Years Learning",
+    },
+
+    {
       value: "Top 50",
       label: "Hackathon Finalist",
     },
-    {
-      value: "1+",
-      label: "Years Learning",
-    },
+
     {
       value: "100%",
       label: "Passion for Coding",
@@ -38,7 +40,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-28">
+    <section id="about" className="pt-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-16">

@@ -1,7 +1,13 @@
 export const skills = [
   {
     title: "Mobile Development",
-    skills: ["React Native", "Android", "Expo", "React Navigation"],
+    skills: [
+      "React Native",
+      "Android",
+      "React Navigation",
+      "Redux Toolkit",
+      "Expo",
+    ],
   },
   {
     title: "Frontend",
@@ -9,10 +15,17 @@ export const skills = [
   },
   {
     title: "Backend & Database",
-    skills: ["Firebase", "Supabase", "PostgreSQL", "REST APIs"],
+    skills: ["Firebase", "Supabase", "REST APIs"],
   },
   {
     title: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Android Studio"],
+    skills: [
+      "Gemini API",
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Figma",
+      "Android Studio",
+    ],
   },
 ];
