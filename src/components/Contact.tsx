@@ -2,7 +2,7 @@ import { FiMail, FiMapPin, FiPhone, FiSend } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative pt-24">
+    <section id="contact" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
         <div className="mb-16 text-center">
@@ -33,7 +33,9 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold">Email</h4>
 
-                  <p className="text-sm text-gray-400">abdullah@example.com</p>
+                  <p className="text-sm text-gray-400">
+                    najeebsayyed777@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -48,7 +50,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold">Phone</h4>
 
-                  <p className="text-sm text-gray-400">+91 XXXXX XXXXX</p>
+                  <p className="text-sm text-gray-400">+91 77740 86280</p>
                 </div>
               </div>
             </div>
@@ -63,7 +65,9 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold">Location</h4>
 
-                  <p className="text-sm text-gray-400">Maharashtra, India</p>
+                  <p className="text-sm text-gray-400">
+                    Aurangabad, Maharashtra, India
+                  </p>
                 </div>
               </div>
             </div>

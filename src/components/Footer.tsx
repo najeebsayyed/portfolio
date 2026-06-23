@@ -1,4 +1,10 @@
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiMail,
+  FiArrowUp,
+  FiTwitter,
+} from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,13 +16,12 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <h2 className="text-3xl font-bold">
-              Abdullah
+              Najeeb
               <span className="text-emerald-400">.</span>
             </h2>
 
             <p className="mt-4 max-w-sm leading-relaxed text-gray-400">
-              React Native Mobile App Developer passionate about building
-              beautiful, scalable and user-friendly applications.
+              Mobile App Developer.
             </p>
           </div>
 
@@ -68,7 +73,15 @@ const Footer = () => {
 
             <div className="flex gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://linkedin.com/in/najeebsayyed"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition hover:border-emerald-400 hover:text-emerald-400"
+              >
+                <FiLinkedin size={22} />
+              </a>
+              <a
+                href="https://github.com/najeebsayyed"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition hover:border-emerald-400 hover:text-emerald-400"
@@ -77,16 +90,15 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://twitter.com/najeebsayyed_"
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition hover:border-emerald-400 hover:text-emerald-400"
               >
-                <FiLinkedin size={22} />
+                <FiTwitter size={22} />
               </a>
-
               <a
-                href="mailto:your@email.com"
+                href="mailto:najeebsayyed777@gmail.com"
                 className="rounded-xl border border-white/10 bg-white/5 p-3 text-gray-300 transition hover:border-emerald-400 hover:text-emerald-400"
               >
                 <FiMail size={22} />
@@ -101,7 +113,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
           <p className="text-sm text-gray-500">
-            © {currentYear} Abdullah Ahmed. All Rights Reserved.
+            © {currentYear} Najeeb Sayyed. All Rights Reserved.
           </p>
 
           <a
