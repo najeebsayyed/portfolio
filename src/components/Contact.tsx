@@ -83,7 +83,8 @@ const Contact = () => {
                   Message Sent!
                 </h3>
                 <p className="text-slate-300">
-                  Thanks for reaching out. I'll get back to you soon.
+                  Thanks for reaching out. I'll get back to you soon. Refresh
+                  the page to send another message.
                 </p>
               </div>
             ) : (
