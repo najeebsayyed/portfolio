@@ -74,7 +74,7 @@ const About = () => {
 
           {/* Right */}
           <div className="space-y-6">
-            {/* Personal Info */}
+            {/* Personal Info
             <div className="rounded-3xl border border-white/10 bg-[#08111F] p-8">
               <h3 className="mb-6 text-xl font-semibold">
                 Personal Information
@@ -92,7 +92,7 @@ const About = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-5">
