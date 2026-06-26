@@ -5,20 +5,23 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24 lg:pt-26"
+      className="relative flex items-center overflow-hidden pt-32"
     >
       {/* Background Glow */}
       <div className="absolute left-20 top-40 h-72 w-72 rounded-full bg-emerald-500/10 blur-[120px]" />
 
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-2 lg:ml-20 lg:gap-16 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-16">
         {/* Left Content */}
         <div className="text-center lg:text-left">
           <span className="inline-block rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm text-emerald-400">
             👋 Welcome to my portfolio
           </span>
 
-          <h1 className="mt-4 text-4xl font-bold leading-tight  md:text-5xl">
-            Hi, I'm <span className="text-emerald-400">Najeeb Sayyed</span>
+          <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            Hi, I'm{" "}
+            <span className="whitespace-nowrap text-emerald-400">
+              Najeeb Sayyed
+            </span>
           </h1>
 
           <h2 className="mt-4 text-xl font-semibold text-gray-300 sm:text-2xl md:text-4xl">
@@ -50,7 +53,7 @@ const Hero = () => {
         </div>
 
         {/* Right Image */}
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:justify-end">
           <div className="relative">
             {/* Glow */}
             <div className="absolute inset-0 rounded-[40px] bg-emerald-400/20 blur-3xl" />
