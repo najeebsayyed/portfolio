@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
-import resumePdf from "../assets/resume/resume.pdf";
+import resumePdf from "../assets/resume/Najeeb_Sayyed_Resume.pdf";
 
 const navLinks = [
   //   { label: "Home", href: "#home" },

@@ -1,5 +1,5 @@
 import profile from "../assets/images/Profile_Pic.jpg";
-import resumePdf from "../assets/resume/resume.pdf";
+import resumePdf from "../assets/resume/Najeeb_Sayyed_Resume.pdf";
 
 const Hero = () => {
   return (
