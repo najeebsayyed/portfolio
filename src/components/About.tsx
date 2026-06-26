@@ -24,7 +24,7 @@ const About = () => {
     <section id="about" className="pt-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-widest text-emerald-400">
             About Me
           </p>

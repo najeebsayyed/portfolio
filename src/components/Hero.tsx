@@ -44,29 +44,9 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="rounded-xl border border-emerald-400 px-7 py-4 text-center font-semibold text-emerald-400 transition hover:bg-emerald-400 hover:text-slate-900"
             >
-              Download CV
+              View Resume
             </a>
           </div>
-
-          {/* Stats */}
-          {/*
-          <div className="mt-14 flex flex-wrap justify-center gap-10 lg:justify-start">
-            <div>
-              <h3 className="text-3xl font-bold text-emerald-400">4+</h3>
-              <p className="text-gray-400">Apps Built</p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-bold text-emerald-400">1+</h3>
-              <p className="text-gray-400">Years Learning</p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-bold text-emerald-400">Top 50</h3>
-              <p className="text-gray-400">Hackathon Finalist</p>
-            </div>
-          </div>
-          */}
         </div>
 
         {/* Right Image */}
@@ -79,7 +59,7 @@ const Hero = () => {
             <div className="relative rounded-[30px] border-4 border-emerald-400 bg-[#08111F] p-3 lg:rounded-[40px]">
               <img
                 src={profile}
-                alt="Abdullah"
+                alt="Najeeb"
                 className="h-[320px] w-[240px] rounded-[24px] object-cover sm:h-[380px] sm:w-[280px] lg:h-[400px] lg:w-[300px] lg:rounded-[30px]"
               />
             </div>

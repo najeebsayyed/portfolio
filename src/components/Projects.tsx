@@ -5,7 +5,7 @@ const Projects = () => {
     <section id="projects" className="pt-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-16 text-center">
           <span className="text-sm font-semibold uppercase tracking-wider text-emerald-400">
             Portfolio
           </span>
@@ -14,7 +14,7 @@ const Projects = () => {
             Featured Projects
           </h2>
 
-          <p className="mt-4 max-w-2xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-2xl text-center text-gray-400">
             Some of my recent work built with React Native, TypeScript,
             Firebase, Supabase and AI APIs.
           </p>
