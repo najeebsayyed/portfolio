@@ -1,47 +1,71 @@
-import teachmate from "../assets/vite.svg";
-import easyscan from "../assets/vite.svg";
-import recipeos from "../assets/vite.svg";
+import teachmate from "../assets/images/teachmate.png";
+import easyscan from "../assets/images/easy-scan.png";
+import recipeos from "../assets/images/recipe-os.png";
+
+import recipeosDemo from "../assets/videos/recipe-os.mp4";
+import easyscanDemo from "../assets/videos/easy-scan.mp4";
+import teachmateDemo from "../assets/videos/teachmate.mp4";
 
 export const projects = [
   {
-    title: "TeachMate AI",
+    title: "RecipeOS",
     description:
-      "AI-powered quiz generator app that creates quizzes based on topic, difficulty and education level using Gemini AI.",
+      "RecipeOS helps users create personalized recipes from available ingredients using Gemini AI, with Supabase authentication, recipe saving, and guest mode support.",
 
-    image: teachmate,
+    image: recipeos,
 
-    tech: ["React Native", "Gemini AI", "Firebase", "TypeScript"],
+    tech: [
+      "React Native",
+      "TypeScript",
+      "Supabase",
+      "Gemini AI",
+      "Redux Toolkit",
+      "Tailwind",
+    ],
 
-    github: "https://github.com/yourusername/teachmate",
+    github: "https://github.com/najeebsayyed/recipe-os",
 
-    demo: "#",
+    demo: recipeosDemo,
   },
 
   {
     title: "Easy Scan",
     description:
-      "Document scanner app with PDF generation, image enhancement and gallery saving functionality.",
+      "Document scanner app with PDF, JPG, PNG generation and gallery/internal storage saving functionality",
 
     image: easyscan,
 
-    tech: ["React Native", "PDF", "Native Modules", "TypeScript"],
+    tech: [
+      "React Native",
+      "PDF",
+      "JPG",
+      "PNG",
+      "react-native-document-scanner",
+      "TypeScript",
+      "Tailwind",
+    ],
 
-    github: "https://github.com/yourusername/easyscan",
+    github: "https://github.com/najeebsayyed/easy-scan",
 
-    demo: "#",
+    demo: easyscanDemo,
   },
-
   {
-    title: "RecipeOS",
+    title: "TeachMate AI",
     description:
-      "AI recipe generator that suggests meals from ingredients using Gemini AI and Supabase backend.",
+      "AI-powered quiz generator app that generates quizzes based on topic, difficulty, and education level using Gemini AI. Recognized as a Top 50 project in the Octopus Hackathon 2025.",
 
-    image: recipeos,
+    image: teachmate,
 
-    tech: ["React Native", "Supabase", "Gemini AI", "TypeScript"],
+    tech: [
+      "React Native",
+      "JavaScript",
+      "Gemini AI",
+      "Redux Toolkit",
+      "Tailwind",
+    ],
 
-    github: "https://github.com/yourusername/recipeos",
+    github: "https://github.com/najeebsayyed/teachmate-ai",
 
-    demo: "#",
+    demo: teachmateDemo,
   },
 ];

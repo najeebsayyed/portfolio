@@ -28,11 +28,11 @@ const Projects = () => {
               className="group overflow-hidden rounded-3xl border border-white/10 bg-[#08111F] transition-all duration-300 hover:-translate-y-2 hover:border-emerald-400/40"
             >
               {/* Image */}
-              <div className="overflow-hidden">
+              <div className="overflow-hidden flex justify-center items-center">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-64 w-full object-cover transition duration-500 group-hover:scale-105"
+                  className="h-56 w-64 object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
 
@@ -71,7 +71,7 @@ const Projects = () => {
                     rel="noreferrer"
                     className="rounded-xl bg-emerald-400 px-5 py-3 font-medium text-slate-900 transition hover:scale-105"
                   >
-                    Live Demo
+                    View Demo
                   </a>
                 </div>
               </div>
