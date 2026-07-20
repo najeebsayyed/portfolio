@@ -1,0 +1,32 @@
+export default function ShineOverlay() {
+  return (
+    <div
+      className="
+      absolute
+      inset-0
+      overflow-hidden
+      pointer-events-none
+      "
+    >
+      <div
+        className="
+        absolute
+        -left-40
+        top-0
+        h-full
+        w-24
+        rotate-12
+        bg-gradient-to-r
+        from-transparent
+        via-white/20
+        to-transparent
+        opacity-0
+        transition-all
+        duration-1000
+        group-hover:left-[130%]
+        group-hover:opacity-100
+        "
+      />
+    </div>
+  );
+}
