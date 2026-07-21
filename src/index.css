@@ -1,2 +1,52 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #050816;
+  --color-surface: #0b1120;
+  --color-card: #111827;
+
+  --color-primary: #76a7ff;
+  --color-primary-hover: #8cb8ff;
+  --color-secondary: #a6c8ff;
+
+  --color-text: #f8fafc;
+  --color-body: #cbd5e1;
+  --color-muted: #94a3b8;
+
+  --color-border: rgba(255,255,255,.08);
+  --color-glass: rgba(17,24,39,.45);
+  --color-grid: rgba(255,255,255,.03);
+  --color-glow: rgba(79,140,255,.35);
+
+  --color-success: #22c55e;
+
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-glass: 0 20px 60px rgba(0,0,0,.45);
+  --shadow-glow: 0 0 40px rgba(79,140,255,.25);
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
