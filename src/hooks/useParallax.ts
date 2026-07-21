@@ -1,4 +1,4 @@
-import { useMotionValue, useSpring } from "framer-motion";
+import {  useSpring } from "framer-motion";
 
 export function useParallax() {
   const rotateX = useSpring(0, {
