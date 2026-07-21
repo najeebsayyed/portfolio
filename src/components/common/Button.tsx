@@ -1,5 +1,5 @@
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from "react";
-import clsx from "clsx";
+import { cn } from "../../lib/utils";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "outline";
@@ -12,7 +12,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
       <button
         ref={ref}
         {...props}
-        className={clsx(
+        className={cn(
           `
           group
           relative
