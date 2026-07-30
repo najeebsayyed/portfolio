@@ -43,7 +43,7 @@ export default function Contact() {
 
           <div className="space-y-5">
             <a
-              href="mailto:youremail@gmail.com"
+              href="mailto:najeebsayyed777@gmail.com"
               className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -53,12 +53,14 @@ export default function Contact() {
               <div>
                 <p className="text-sm text-muted">Email</p>
 
-                <h4 className="font-semibold text-text">youremail@gmail.com</h4>
+                <h4 className="font-semibold text-text">
+                  najeebsayyed@gmail.com
+                </h4>
               </div>
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/najeebsayyed"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
@@ -75,7 +77,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://github.com"
+              href="https://github.com/najeebsayyed"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
