@@ -22,12 +22,12 @@ export default function Contact() {
         {/* Heading */}
 
         <div className="mx-auto max-w-3xl text-center">
-          <span className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-primary">
+          <span className="inline-flex rounded-full border border-border bg-surface px-4 py-2 text-sm text-primary">
             Contact
           </span>
 
           <h2 className="mt-8 text-4xl font-bold leading-tight text-text md:text-6xl">
-            <span className="text-primary"> Let's Build </span>
+            <span className="text-primary">Let's Build </span>
             Something Amazing
             <span className="text-primary"> Together.</span>
           </h2>
@@ -38,24 +38,24 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Grid */}
+        {/* Content */}
 
-        <div className="mt-20 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* Left */}
+        <div className="mt-20 grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          {/* Contact Info */}
 
           <div className="space-y-5">
             <a
               href="mailto:najeebsayyed777@gmail.com"
-              className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaEnvelope size={22} />
               </div>
 
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm text-muted">Email</p>
 
-                <h4 className="font-semibold text-text">
+                <h4 className="break-all font-semibold text-text">
                   najeebsayyed@gmail.com
                 </h4>
               </div>
@@ -65,13 +65,13 @@ export default function Contact() {
               href="https://linkedin.com/in/najeebsayyed"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaLinkedinIn size={22} />
               </div>
 
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm text-muted">LinkedIn</p>
 
                 <h4 className="font-semibold text-text">Connect with me</h4>
@@ -82,13 +82,13 @@ export default function Contact() {
               href="https://github.com/najeebsayyed"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-5 rounded-3xl border border-border bg-surface p-6 transition-all duration-300 hover:border-primary"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaGithub size={22} />
               </div>
 
-              <div>
+              <div className="min-w-0 flex-1">
                 <p className="text-sm text-muted">GitHub</p>
 
                 <h4 className="font-semibold text-text">
@@ -100,7 +100,7 @@ export default function Contact() {
 
           {/* Form */}
 
-          <div className="rounded-[32px] border border-border bg-surface p-8">
+          <div className="rounded-[32px] border border-border bg-surface p-5 sm:p-8">
             <form className="space-y-6">
               <div>
                 <label className="mb-2 block text-sm font-medium text-muted">
@@ -110,7 +110,7 @@ export default function Contact() {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full rounded-2xl border border-border bg-background px-5 py-4 text-text outline-none transition focus:border-primary"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export default function Contact() {
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="w-full rounded-2xl border border-border bg-background px-5 py-4 text-text outline-none transition focus:border-primary"
+                  className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
                 />
               </div>
 
@@ -134,7 +134,7 @@ export default function Contact() {
                 <textarea
                   rows={6}
                   placeholder="Tell me about your project..."
-                  className="w-full resize-none rounded-2xl border border-border bg-background px-5 py-4 text-text outline-none transition focus:border-primary"
+                  className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
                 />
               </div>
 

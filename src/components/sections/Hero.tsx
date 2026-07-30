@@ -9,15 +9,12 @@ import {
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
-import profilePic from "../../assets/images/Profile_Pic.jpg";
+import profilePic from "../../assets/images/Profile_Pic_gpt.png";
 import resume from "../../assets/resume/Najeeb-Sayyed_Resume.pdf";
 
 export default function Hero() {
   return (
-    <Section
-      id="hero"
-      className="relative overflow-hidden pt-28 lg:min-h-screen lg:pt-32"
-    >
+    <Section id="hero" className="relative overflow-hidden pt-28 lg:pt-32">
       {/* Background Glow */}
 
       <div className="absolute inset-0 -z-10 overflow-hidden">
