@@ -1,3 +1,4 @@
+import { useForm, ValidationError } from "@formspree/react";
 import {
   FaEnvelope,
   FaGithub,
@@ -10,6 +11,8 @@ import Container from "../ui/Container";
 import Section from "../ui/Section";
 
 export default function Contact() {
+  const [state, handleSubmit] = useForm("xeeborqy");
+
   return (
     <Section id="contact" className="relative overflow-hidden">
       {/* Background */}
@@ -45,8 +48,8 @@ export default function Contact() {
 
           <div className="space-y-5">
             <a
-              href="mailto:najeebsayyed777@gmail.com"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
+              href="mailto:najeebsayyed@gmail.com"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaEnvelope size={22} />
@@ -65,7 +68,7 @@ export default function Contact() {
               href="https://linkedin.com/in/najeebsayyed"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaLinkedinIn size={22} />
@@ -82,7 +85,7 @@ export default function Contact() {
               href="https://github.com/najeebsayyed"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:border-primary hover:-translate-y-1"
+              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <FaGithub size={22} />
@@ -101,48 +104,90 @@ export default function Contact() {
           {/* Form */}
 
           <div className="rounded-[32px] border border-border bg-surface p-5 sm:p-8">
-            <form className="space-y-6">
-              <div>
-                <label className="mb-2 block text-sm font-medium text-muted">
-                  Name
-                </label>
+            {state.succeeded ? (
+              <div className="flex min-h-[450px] flex-col items-center justify-center text-center">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-green-500/10 text-4xl text-green-500">
+                  ✓
+                </div>
 
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
-                />
+                <h3 className="mt-6 text-3xl font-bold text-text">
+                  Message Sent!
+                </h3>
+
+                <p className="mt-4 max-w-md leading-7 text-muted">
+                  Thank you for reaching out. I've received your message and
+                  will get back to you as soon as possible.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-muted">
+                    Name
+                  </label>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-muted">
-                  Email
-                </label>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
+                  />
+                </div>
 
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
-                />
-              </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-muted">
+                    Email
+                  </label>
 
-              <div>
-                <label className="mb-2 block text-sm font-medium text-muted">
-                  Message
-                </label>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="your@email.com"
+                    className="w-full rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
+                  />
 
-                <textarea
-                  rows={6}
-                  placeholder="Tell me about your project..."
-                  className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
-                />
-              </div>
+                  <ValidationError
+                    prefix="Email"
+                    field="email"
+                    errors={state.errors}
+                    className="mt-2 text-sm text-red-500"
+                  />
+                </div>
 
-              <Button className="w-full justify-center gap-2">
-                <FaPaperPlane />
-                Send Message
-              </Button>
-            </form>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-muted">
+                    Message
+                  </label>
+
+                  <textarea
+                    rows={6}
+                    name="message"
+                    required
+                    placeholder="Tell me about your project..."
+                    className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-4 text-text outline-none transition-colors focus:border-primary"
+                  />
+
+                  <ValidationError
+                    prefix="Message"
+                    field="message"
+                    errors={state.errors}
+                    className="mt-2 text-sm text-red-500"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="w-full justify-center gap-2"
+                >
+                  <FaPaperPlane />
+
+                  {state.submitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </Container>
