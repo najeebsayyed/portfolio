@@ -2,19 +2,12 @@ import { FaCode, FaMobileAlt, FaRobot } from "react-icons/fa";
 import {
   SiReact,
   SiTypescript,
-  SiJavascript,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
   SiFastify,
   SiSupabase,
-  SiPostgresql,
-  SiFirebase,
-  SiGit,
-  SiGithub,
   SiOpenaigym,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
+
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 
@@ -44,82 +37,39 @@ const features = [
 
 const technologies = [
   {
-    name: "React",
-    icon: <SiReact size={30} />,
+    name: "TypeScript",
+    icon: <SiTypescript size={32} />,
+    category: "Language",
+  },
+  {
+    name: "React JS",
+    icon: <SiReact size={32} />,
     category: "Frontend",
   },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript size={30} />,
-    category: "Language",
-  },
-  {
-    name: "JavaScript",
-    icon: <SiJavascript size={30} />,
-    category: "Language",
-  },
-  {
-    name: "Next.js",
-    icon: <SiNextdotjs size={30} />,
-    category: "Framework",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss size={30} />,
-    category: "Styling",
-  },
+
   {
     name: "React Native",
-    icon: <TbBrandReactNative size={30} />,
+    icon: <TbBrandReactNative size={32} />,
     category: "Mobile",
   },
-  {
-    name: "Node.js",
-    icon: <SiNodedotjs size={30} />,
-    category: "Backend",
-  },
+
   {
     name: "Fastify",
-    icon: <SiFastify size={30} />,
+    icon: <SiFastify size={32} />,
     category: "Backend",
   },
   {
     name: "Supabase",
-    icon: <SiSupabase size={30} />,
+    icon: <SiSupabase size={32} />,
     category: "Backend",
   },
+
   {
-    name: "PostgreSQL",
-    icon: <SiPostgresql size={30} />,
-    category: "Database",
-  },
-  {
-    name: "Firebase",
-    icon: <SiFirebase size={30} />,
-    category: "Backend",
-  },
-  {
-    name: "Git",
-    icon: <SiGit size={30} />,
-    category: "Tools",
-  },
-  {
-    name: "GitHub",
-    icon: <SiGithub size={30} />,
-    category: "Tools",
-  },
-  {
-    name: "OpenAI",
-    icon: <SiOpenaigym size={30} />,
-    category: "AI",
-  },
-  {
-    name: "Gemini",
-    icon: <div className="text-3xl font-bold">✦</div>,
+    name: "OpenAI & Gemini",
+    icon: <SiOpenaigym size={32} />,
     category: "AI",
   },
 ];
-
 export default function About() {
   return (
     <Section id="about" className="relative overflow-hidden">
@@ -172,23 +122,25 @@ export default function About() {
 
         {/* Technologies */}
 
+        {/* Technologies */}
+
         <div className="mt-32">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="rounded-full border border-border bg-surface px-4 py-2 text-sm text-primary">
-              Technologies
+            <span className="inline-flex rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-primary">
+              Tech Stack
             </span>
 
             <h3 className="mt-6 text-4xl font-bold text-text md:text-5xl">
-              My Tech Stack
+              Technologies I Love Working With
             </h3>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">
-              I enjoy working with modern technologies to build fast, scalable
-              and beautiful digital products.
+              Modern technologies that help me build fast, scalable, beautiful
+              and AI-powered digital experiences.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mx-auto mt-16 grid max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {technologies.map((tech) => (
               <div
                 key={tech.name}
@@ -196,7 +148,7 @@ export default function About() {
           group
           relative
           overflow-hidden
-          rounded-3xl
+          rounded-[28px]
           border
           border-border
           bg-surface
@@ -205,18 +157,19 @@ export default function About() {
           duration-300
           hover:-translate-y-2
           hover:border-primary
+          hover:shadow-[0_0_40px_rgba(37,99,235,0.12)]
         "
               >
-                {/* Glow */}
+                {/* Background Glow */}
 
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-                <div className="relative">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-background text-primary transition-transform duration-300 group-hover:scale-110">
+                <div className="relative flex flex-col items-center text-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-background text-primary transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                     {tech.icon}
                   </div>
 
-                  <h4 className="mt-6 text-lg font-semibold text-text">
+                  <h4 className="mt-5 text-lg font-semibold text-text">
                     {tech.name}
                   </h4>
 
