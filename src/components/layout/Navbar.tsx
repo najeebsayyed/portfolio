@@ -138,12 +138,27 @@ export default function Navbar() {
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex h-16 items-center justify-between border-b border-slate-800 px-6">
-          <span className="text-lg font-bold text-white">Najeeb</span>
+        <div className="flex h-16 items-center justify-between border-b border-border px-6">
+          <button
+            type="button"
+            onClick={() => {
+              setMobileOpen(false);
+
+              document.getElementById("hero")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+            className="text-lg font-bold text-text transition-colors hover:text-primary"
+          >
+            Najeeb
+          </button>
 
           <button
+            type="button"
             onClick={() => setMobileOpen(false)}
-            className="text-slate-300"
+            className="text-muted transition-colors hover:text-text"
+            aria-label="Close menu"
           >
             <HiOutlineX size={26} />
           </button>
@@ -187,8 +202,14 @@ export default function Navbar() {
               <FaXTwitter size={22} />
             </a>
           </div>
-
-          <Button className="mt-8 w-full">Connect</Button>
+          <a href="#contact">
+            <Button
+              onClick={() => setMobileOpen(false)}
+              className="mt-8 w-full"
+            >
+              Connect
+            </Button>
+          </a>
         </nav>
       </aside>
     </>

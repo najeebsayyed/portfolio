@@ -13,11 +13,11 @@ import Section from "../ui/Section";
 
 const features = [
   {
-    number: "01",
-    icon: <FaCode size={22} />,
-    title: "Web Development",
+    number: "03",
+    icon: <FaRobot size={22} />,
+    title: "AI Products",
     description:
-      "Fast, responsive and scalable web applications built with React, TypeScript and modern technologies.",
+      "AI-powered applications using LLMs, automation and modern APIs to solve real-world problems.",
   },
   {
     number: "02",
@@ -26,12 +26,13 @@ const features = [
     description:
       "Cross-platform mobile experiences using React Native with clean UI and native performance.",
   },
+
   {
-    number: "03",
-    icon: <FaRobot size={22} />,
-    title: "AI Products",
+    number: "01",
+    icon: <FaCode size={22} />,
+    title: "Web Development",
     description:
-      "AI-powered applications using LLMs, automation and modern APIs to solve real-world problems.",
+      "Fast, responsive and scalable web applications built with React, TypeScript and modern technologies.",
   },
 ];
 
@@ -131,7 +132,8 @@ export default function About() {
             </span>
 
             <h3 className="mt-6 text-4xl font-bold text-text md:text-5xl">
-              Technologies I Love Working With
+              <span className="text-primary">Technologies </span> I Love Working
+              With
             </h3>
 
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">

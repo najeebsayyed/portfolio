@@ -26,8 +26,10 @@ export default function Contact() {
             Contact
           </span>
 
-          <h2 className="mt-6 text-4xl font-bold text-text md:text-5xl">
-            Let's Build Something Amazing Together
+          <h2 className="mt-8 text-4xl font-bold leading-tight text-text md:text-6xl">
+            <span className="text-primary"> Let's Build </span>
+            Something Amazing
+            <span className="text-primary"> Together.</span>
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-muted">

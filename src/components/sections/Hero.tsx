@@ -15,7 +15,7 @@ import resume from "../../assets/resume/Najeeb-Sayyed_Resume.pdf";
 export default function Hero() {
   return (
     <Section
-      id="home"
+      id="hero"
       className="relative overflow-hidden pt-28 lg:min-h-screen lg:pt-32"
     >
       {/* Background Glow */}
