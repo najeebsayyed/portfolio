@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --background: #030712;
+  --surface: #0f172a;
+  --surface-hover: #162033;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #60a5fa;
+
+  --text: #f8fafc;
+  --muted: #94a3b8;
+
+  --border: #1e293b;
+  --success: #22c55e;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+
+  --color-border: var(--border);
+  --color-success: var(--success);
+
+  --radius-card: var(--radius-lg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
