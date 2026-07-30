@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
 
             <h1 className="mt-4 text-5xl font-bold leading-tight text-text sm:text-5xl lg:text-5xl">
-              Hi, I'm <span className="text-primary">Abdullah</span>
+              Hi, I'm <span className="text-primary">Najeeb</span>
               <br />
               AI & Full Stack Developer
             </h1>
