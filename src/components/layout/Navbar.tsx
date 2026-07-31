@@ -102,7 +102,9 @@ export default function Navbar() {
               >
                 <FaXTwitter size={20} />
               </a>
-              <Button>Connect</Button>
+              <a href="#contact">
+                <Button onClick={() => setMobileOpen(false)}>Connect</Button>
+              </a>
             </div>
 
             {/* Mobile */}
