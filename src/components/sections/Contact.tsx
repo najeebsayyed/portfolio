@@ -59,7 +59,7 @@ export default function Contact() {
                 <p className="text-sm text-muted">Email</p>
 
                 <h4 className="break-all font-semibold text-text">
-                  najeebsayyed@gmail.com
+                  najeebsayyed777@gmail.com
                 </h4>
               </div>
             </a>
