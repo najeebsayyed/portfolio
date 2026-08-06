@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
 import About from "../components/sections/About";
@@ -10,6 +11,14 @@ import Projects from "../components/sections/Projects";
 import CustomCursor from "../components/ui/CustomCursor";
 
 export default function Home() {
+  useEffect(() => {
+    // Ensure the website always opens at the top Hero section on refresh / initial load
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, []);
+
   return (
     <>
       <CustomCursor />

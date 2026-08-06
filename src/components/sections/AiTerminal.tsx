@@ -36,7 +36,10 @@ export default function AiTerminal() {
   const terminalEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // Only scroll the terminal container on user action, NOT on initial page mount
+    if (history.length > 1) {
+      terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   }, [history]);
 
   const executeCommand = (cmdStr: string) => {
