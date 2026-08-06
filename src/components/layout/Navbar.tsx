@@ -1,21 +1,41 @@
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { motion, useScroll, useSpring } from "framer-motion";
+import { FaGithub, FaLinkedin, FaXTwitter, FaArrowUp, FaTerminal } from "react-icons/fa6";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 
 import { NAV_LINKS } from "../../constants/navigation";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
+import CommandPalette from "../ui/CommandPalette";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [cmdOpen, setCmdOpen] = useState(false);
+
+  // Framer Motion Scroll Progress Bar
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+      setShowBackToTop(window.scrollY > 350);
+    };
 
     const onKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setCmdOpen((prev) => !prev);
+      }
       if (e.key === "Escape") {
         setMobileOpen(false);
+        setCmdOpen(false);
       }
     };
 
@@ -30,36 +50,42 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
-
     return () => {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50  py-4">
+      {/* Top Scroll Reading Progress Indicator */}
+      <motion.div
+        style={{ scaleX }}
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-purple-500 origin-left z-[100] shadow-[0_0_12px_rgba(59,130,246,0.8)]"
+      />
+
+      <header className="fixed inset-x-0 top-0 z-50 py-4 transition-all duration-300">
         <Container>
           <div
-            className={`flex h-16 items-center justify-between rounded-2xl border px-2 transition-all duration-300 ${
+            className={`flex h-16 items-center justify-between rounded-2xl border px-4 transition-all duration-300 ${
               scrolled
-                ? "border-slate-800/80 bg-slate-950/80 shadow-2xl backdrop-blur-xl"
+                ? "border-slate-800/80 bg-slate-950/85 shadow-2xl backdrop-blur-xl"
                 : "border-transparent bg-transparent"
             }`}
           >
-            {/* Logo */}
-
+            {/* Brand Logo */}
             <a
               href="#hero"
-              className="flex items-center gap-2 text-xl font-bold tracking-tight"
+              className="flex items-center gap-2 text-xl font-bold tracking-tight hover:opacity-90 transition-opacity"
             >
-              <span className="text-blue-500">&lt;/&gt;</span>
-
+              <span className="text-primary font-mono font-bold">&lt;/&gt;</span>
               <span className="text-white">Najeeb</span>
             </a>
 
-            {/* Desktop */}
-
+            {/* Desktop Navigation Links */}
             <nav className="hidden items-center gap-8 lg:flex">
               {NAV_LINKS.map((item) => (
                 <a
@@ -72,88 +98,94 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Right */}
+            {/* Right Command Palette Trigger & Social Actions */}
+            <div className="hidden items-center gap-3 lg:flex">
+              {/* Cmd + K Button */}
+              <button
+                onClick={() => setCmdOpen(true)}
+                className="flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-900/80 px-3 py-1.5 text-xs text-slate-400 hover:border-primary hover:text-white transition shadow-sm"
+                title="Open Command Palette (Cmd + K)"
+              >
+                <FaTerminal size={12} className="text-primary" />
+                <span className="font-mono text-[11px] bg-slate-800 px-1.5 py-0.5 rounded text-slate-300">⌘K</span>
+              </button>
 
-            <div className="hidden items-center gap-5 lg:flex">
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/najeebsayyed"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="rounded-lg p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-blue-400"
+                className="rounded-xl p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-primary"
               >
-                <FaLinkedin size={20} />
+                <FaLinkedin size={19} />
               </a>
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/najeebsayyed"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="rounded-lg p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-blue-400"
+                className="rounded-xl p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-primary"
               >
-                <FaGithub size={20} />
+                <FaGithub size={19} />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://x.com/najeebsayyed_"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="rounded-lg p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-blue-400"
+                aria-label="Twitter / X"
+                className="rounded-xl p-2 text-slate-400 transition-all duration-200 hover:-translate-y-1 hover:text-primary"
               >
-                <FaXTwitter size={20} />
+                <FaXTwitter size={19} />
               </a>
               <a href="#contact">
                 <Button onClick={() => setMobileOpen(false)}>Connect</Button>
               </a>
             </div>
 
-            {/* Mobile */}
-
-            <button
-              aria-label="Toggle Menu"
-              onClick={() => setMobileOpen((prev) => !prev)}
-              className="text-slate-300 transition hover:text-white lg:hidden"
-            >
-              {mobileOpen ? (
-                <HiOutlineX size={28} />
-              ) : (
-                <HiOutlineMenuAlt3 size={28} />
-              )}
-            </button>
+            {/* Mobile Hamburger Controls */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <button
+                onClick={() => setCmdOpen(true)}
+                className="rounded-lg border border-slate-800 bg-slate-900 px-2.5 py-1.5 text-xs font-mono text-primary"
+              >
+                ⌘K
+              </button>
+              <button
+                aria-label="Toggle Menu"
+                onClick={() => setMobileOpen((prev) => !prev)}
+                className="text-slate-300 transition hover:text-white p-2"
+              >
+                {mobileOpen ? <HiOutlineX size={28} /> : <HiOutlineMenuAlt3 size={28} />}
+              </button>
+            </div>
           </div>
         </Container>
       </header>
 
-      {/* Overlay */}
-
+      {/* Backdrop Overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       {/* Mobile Drawer */}
-
       <aside
-        className={`fixed right-0 top-0 z-50 h-screen w-[300px] bg-slate-950 shadow-2xl transition-transform duration-300 lg:hidden ${
+        className={`fixed right-0 top-0 z-50 h-screen w-[300px] bg-slate-950 border-l border-slate-800 shadow-2xl transition-transform duration-300 lg:hidden ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex h-16 items-center justify-between border-b border-border px-6">
+        <div className="flex h-16 items-center justify-between border-b border-slate-800 px-6">
           <button
             type="button"
             onClick={() => {
               setMobileOpen(false);
-
-              document.getElementById("hero")?.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
+              scrollToTop();
             }}
             className="text-lg font-bold text-text transition-colors hover:text-primary"
           >
-            Najeeb
+            Najeeb Sayyed
           </button>
 
           <button
@@ -178,12 +210,12 @@ export default function Navbar() {
             </a>
           ))}
 
-          <div className="mt-6 flex gap-5">
+          <div className="mt-6 flex items-center justify-around border-t border-slate-800 pt-6">
             <a
               href="https://linkedin.com/in/najeebsayyed"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 transition hover:text-blue-400"
+              className="text-slate-400 transition hover:text-primary p-2"
             >
               <FaLinkedin size={22} />
             </a>
@@ -191,7 +223,7 @@ export default function Navbar() {
               href="https://github.com/najeebsayyed"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 transition hover:text-blue-400"
+              className="text-slate-400 transition hover:text-primary p-2"
             >
               <FaGithub size={22} />
             </a>
@@ -199,21 +231,39 @@ export default function Navbar() {
               href="https://x.com/najeebsayyed_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 transition hover:text-blue-400"
+              className="text-slate-400 transition hover:text-primary p-2"
             >
               <FaXTwitter size={22} />
             </a>
           </div>
+
           <a href="#contact">
             <Button
               onClick={() => setMobileOpen(false)}
-              className="mt-8 w-full"
+              className="mt-8 w-full justify-center"
             >
               Connect
             </Button>
           </a>
         </nav>
       </aside>
+
+      {/* Command Palette Modal */}
+      <CommandPalette isOpen={cmdOpen} onClose={() => setCmdOpen(false)} />
+
+      {/* Floating Back to Top Button */}
+      {showBackToTop && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.5 }}
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-800 bg-slate-950/90 text-primary shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white active:scale-95"
+          aria-label="Back to Top"
+        >
+          <FaArrowUp size={16} />
+        </motion.button>
+      )}
     </>
   );
 }
