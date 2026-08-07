@@ -2,7 +2,6 @@ import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
-  FaGithub,
   FaLinkedinIn,
   FaPaperPlane,
   FaWandMagicSparkles,
@@ -89,27 +88,10 @@ export default function Contact() {
 
               <div className="min-w-0 flex-1">
                 <p className="text-xs sm:text-sm text-muted">LinkedIn</p>
-                <h4 className="text-sm sm:text-base font-semibold text-text">linkedin.com/in/najeebsayyed</h4>
+                <h4 className="text-sm sm:text-base font-semibold text-text">Najeeb Sayyed</h4>
               </div>
             </a>
 
-            <a
-              href="https://github.com/najeebsayyed"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary active:scale-[0.98]"
-            >
-              <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <FaGithub size={20} />
-              </div>
-
-              <div className="min-w-0 flex-1">
-                <p className="text-xs sm:text-sm text-muted">GitHub</p>
-                <h4 className="text-sm sm:text-base font-semibold text-text">
-                  github.com/najeebsayyed
-                </h4>
-              </div>
-            </a>
           </div>
 
           {/* Contact Form Card */}
@@ -139,7 +121,7 @@ export default function Contact() {
                     type="text"
                     name="name"
                     required
-                    placeholder="e.g. Sarah Jenkins"
+                    placeholder="e.g. Najeeb Sayyed"
                     className="w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-colors focus:border-primary placeholder:text-slate-600"
                   />
                 </div>
@@ -153,7 +135,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     required
-                    placeholder="sarah@company.com"
+                    placeholder="najeeb@example.com"
                     className="w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-colors focus:border-primary placeholder:text-slate-600"
                   />
 

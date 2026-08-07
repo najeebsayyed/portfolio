@@ -1,4 +1,4 @@
-import { FaArrowUp, FaGithub, FaLinkedinIn, FaEnvelope, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaEnvelope, FaXTwitter } from "react-icons/fa6";
 import Container from "../ui/Container";
 
 const links = [
@@ -91,18 +91,10 @@ export default function Footer() {
           <div className="my-8 h-px bg-border/60" />
 
           {/* Bottom Row */}
-          <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row">
+          <div className="flex items-center justify-center text-center">
             <p className="text-xs text-muted">
               © {new Date().getFullYear()} Najeeb Sayyed. Crafted with React 19, TypeScript, Framer Motion & Tailwind CSS.
             </p>
-
-            <button
-              onClick={scrollToTop}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-surface text-muted transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:text-primary active:scale-95 shadow-md"
-              aria-label="Back to top"
-            >
-              <FaArrowUp size={14} />
-            </button>
           </div>
         </div>
       </Container>
