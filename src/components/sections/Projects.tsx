@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaPlay, FaXmark, FaWandMagicSparkles, FaCheck } from "react-icons/fa6";
+import { FaGithub, FaPlay, FaXmark, FaWandMagicSparkles, FaCheck, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import Container from "../ui/Container";
 import Section from "../ui/Section";
 import SpotlightCard from "../ui/SpotlightCard";
 import { projects } from "../../data/projects";
 
-const categories = ["All", "Full-Stack & AI", "Generative AI", "Mobile Utility"];
+const categories = ["All", "Mobile Apps", "AI Powered", "Websites"];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -14,7 +14,7 @@ export default function Projects() {
 
   const filteredProjects = projects.filter((project) => {
     if (activeFilter === "All") return true;
-    return project.category === activeFilter;
+    return project.categories.includes(activeFilter);
   });
 
   return (
@@ -53,7 +53,7 @@ export default function Projects() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-base sm:text-lg leading-relaxed text-muted"
           >
-            A showcase of full-stack web, mobile, and generative AI applications engineered with clean architecture.
+            A showcase of cross-platform mobile applications and AI-powered products engineered with clean architecture.
           </motion.p>
         </div>
 
@@ -99,7 +99,7 @@ export default function Projects() {
                     {/* Play Video Demo Trigger Overlay */}
                     {project.demo && (
                       <button
-                        onClick={() => setActiveVideo({ title: project.title, src: project.demo })}
+                        onClick={() => setActiveVideo({ title: project.title, src: project.demo! })}
                         className="absolute inset-0 flex items-center justify-center bg-slate-950/40 opacity-90 sm:opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         aria-label="Play App Demo"
                       >
@@ -111,7 +111,7 @@ export default function Projects() {
 
                     {/* Top Category Badge */}
                     <span className="absolute top-3 left-3 rounded-full bg-slate-900/90 border border-slate-700 backdrop-blur-md px-3 py-1 text-[11px] font-semibold text-primary shadow-md">
-                      {project.category}
+                      {project.categories[0]}
                     </span>
 
                     {/* Top Hackathon Badge */}
@@ -159,23 +159,43 @@ export default function Projects() {
                     <div className="mt-5 flex items-center justify-between border-t border-slate-800/80 pt-4">
                       {project.demo ? (
                         <button
-                          onClick={() => setActiveVideo({ title: project.title, src: project.demo })}
+                          onClick={() => setActiveVideo({ title: project.title, src: project.demo! })}
                           className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-colors hover:text-secondary"
                         >
-                          <FaPlay size={11} /> Watch Demo Video
+                          <FaPlay size={11} /> Watch Demo
                         </button>
+                      ) : project.live ? (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-colors hover:text-secondary"
+                        >
+                          <FaArrowUpRightFromSquare size={11} /> Live Site
+                        </a>
                       ) : (
-                        <span className="text-xs text-muted">Live Preview Available</span>
+                        <span className="text-xs text-muted">Preview Available</span>
                       )}
 
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-xl border border-slate-800 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-text transition-all hover:border-primary hover:bg-slate-800 hover:text-primary"
-                      >
-                        <FaGithub size={13} /> Source Code
-                      </a>
+                      {project.github ? (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-xl border border-slate-800 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-text transition-all hover:border-primary hover:bg-slate-800 hover:text-primary"
+                        >
+                          <FaGithub size={13} /> Source Code
+                        </a>
+                      ) : project.live ? (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-xl border border-slate-800 bg-slate-900 px-3 py-1.5 text-xs font-semibold text-text transition-all hover:border-primary hover:bg-slate-800 hover:text-primary"
+                        >
+                          <FaArrowUpRightFromSquare size={11} /> Live Site
+                        </a>
+                      ) : null}
                     </div>
                   </div>
                 </SpotlightCard>

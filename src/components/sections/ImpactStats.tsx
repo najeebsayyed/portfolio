@@ -23,9 +23,9 @@ const stats = [
   },
   {
     icon: <FaCode className="text-purple-400" size={24} />,
-    value: "Full-Stack",
-    label: "Production Readiness",
-    description: "Building production software at GetCollab.",
+    value: "4+ Apps",
+    label: "Mobile Apps Shipped",
+    description: "Cross-platform iOS & Android apps in production.",
   },
 ];
 

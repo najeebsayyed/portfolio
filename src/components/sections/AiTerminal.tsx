@@ -26,7 +26,7 @@ export default function AiTerminal() {
         <div>
           <p className="text-secondary font-mono">⚡ Welcome to Najeeb's Interactive AI Terminal [v2.4.0]</p>
           <p className="text-muted text-xs mt-1">
-            Type a command or click the preset buttons below to query Najeeb's AI & Full-Stack architecture specs.
+            Type a command or click the preset buttons below to query Najeeb's Mobile App Development specs.
           </p>
         </div>
       ),
@@ -50,9 +50,9 @@ export default function AiTerminal() {
       case "whoami":
         res = (
           <div className="space-y-1 text-slate-300">
-            <p className="font-bold text-primary">Najeeb Sayyed - AI & Full-Stack Developer</p>
+            <p className="font-bold text-primary">Najeeb Sayyed - Mobile App Developer</p>
             <p>&bull; Role: Software Developer Intern @ GetCollab (Remote)</p>
-            <p>&bull; Focus: Building fast React & React Native apps with Generative AI (Gemini/OpenAI)</p>
+            <p>&bull; Focus: Building cross-platform mobile apps with React Native, Expo & TypeScript</p>
             <p>&bull; Code Auditing: Reviewed AI-generated JavaScript & web APIs at Outlier AI</p>
           </div>
         );
@@ -62,10 +62,10 @@ export default function AiTerminal() {
         res = (
           <div className="space-y-1 text-slate-300">
             <p className="text-secondary font-semibold">💻 Technical Stack & Arsenal:</p>
-            <p><span className="text-primary font-mono">[Full-Stack]:</span> React JS, TypeScript, JavaScript, Tailwind CSS, Next.js</p>
+            <p><span className="text-primary font-mono">[Mobile]:</span> React Native, Expo, TypeScript, Redux Toolkit, Navigation</p>
             <p><span className="text-primary font-mono">[Backend & DB]:</span> Node.js, Fastify, Supabase, Firebase, REST APIs, PostgreSQL</p>
             <p><span className="text-primary font-mono">[AI & ML]:</span> Gemini API, OpenAI API, Prompt Engineering, Code Auditing</p>
-            <p><span className="text-primary font-mono">[Mobile]:</span> React Native, Expo, Android Development</p>
+            <p><span className="text-primary font-mono">[Web & Backend]:</span> React JS, Tailwind CSS, Supabase, Firebase, REST APIs</p>
           </div>
         );
         break;
@@ -73,18 +73,26 @@ export default function AiTerminal() {
       case "projects":
         res = (
           <div className="space-y-2 text-slate-300">
-            <p className="text-secondary font-semibold">🚀 Highlighted Full-Stack & AI Projects:</p>
+            <p className="text-secondary font-semibold">🚀 Highlighted Projects:</p>
             <div>
               <p className="font-bold text-white">1. RecipeOS</p>
-              <p className="text-xs text-muted">Full-stack Gemini AI recipe engine with Supabase Auth & Redux Toolkit.</p>
+              <p className="text-xs text-muted">AI-powered recipe mobile app with Gemini AI, Supabase Auth & Redux Toolkit.</p>
             </div>
             <div>
-              <p className="font-bold text-white">2. TeachMate AI</p>
-              <p className="text-xs text-muted">Generative AI quiz platform &bull; Top 50 Finalist in Octopus Hackathon 2025 (900+ teams).</p>
+              <p className="font-bold text-white">2. FocusBids</p>
+              <p className="text-xs text-muted">AI-powered proposal intelligence platform — <span className="text-primary">focusbids.com</span></p>
             </div>
             <div>
-              <p className="font-bold text-white">3. Easy Scan</p>
+              <p className="font-bold text-white">3. TeachMate AI</p>
+              <p className="text-xs text-muted">AI quiz platform &bull; Top 50 Finalist in Octopus Hackathon 2025 (900+ teams).</p>
+            </div>
+            <div>
+              <p className="font-bold text-white">4. Easy Scan</p>
               <p className="text-xs text-muted">Document scanner suite with PDF export & local file processing.</p>
+            </div>
+            <div>
+              <p className="font-bold text-white">5. najeebsayyed.in</p>
+              <p className="text-xs text-muted">Personal developer portfolio — <span className="text-primary">najeebsayyed.in</span></p>
             </div>
           </div>
         );

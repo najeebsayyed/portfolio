@@ -41,7 +41,7 @@ export default function Experience() {
             transition={{ delay: 0.2 }}
             className="mt-4 text-base sm:text-lg leading-relaxed text-muted"
           >
-            Building full-stack features, auditing AI-generated JavaScript codebases, and shipping production applications.
+            Building mobile apps, auditing AI-generated code, and shipping cross-platform production applications.
           </motion.p>
         </div>
 

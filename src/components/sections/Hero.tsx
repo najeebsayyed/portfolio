@@ -17,10 +17,10 @@ import profilePic from "../../assets/images/Profile_Pic_gpt.png";
 import resume from "../../assets/resume/Najeeb-Sayyed_Resume.pdf";
 
 const roles = [
-  "AI & Full-Stack Developer",
-  "Generative AI Architect",
-  "React & TypeScript Engineer",
-  "Node.js & Supabase Developer",
+  "Mobile App Developer",
+  "React Native Expert",
+  "Cross-Platform Engineer",
+  "Expo & TypeScript Specialist",
 ];
 
 export default function Hero() {
@@ -71,7 +71,7 @@ export default function Hero() {
             {/* Status Pill */}
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/90 backdrop-blur-md px-4 py-2 text-xs font-semibold text-muted sm:text-sm shadow-md">
               <span className="h-2.5 w-2.5 rounded-full bg-success animate-pulse" />
-              <span>Available for AI & Full-Stack Developer roles</span>
+              <span>Available for Mobile App Developer roles</span>
             </div>
 
             {/* Main Headline */}
@@ -87,24 +87,24 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-muted">
-              I build fast, scalable, production-ready web and mobile products by combining modern React & TypeScript full-stack architectures with cutting-edge Generative AI integrations.
+              I build fast, production-ready mobile applications for iOS & Android using React Native, Expo, TypeScript, and modern backend services like Supabase & Firebase.
             </p>
 
             {/* Quick Metrics Badge */}
             <div className="mt-6 flex flex-wrap items-center gap-6 border-y border-border/60 py-4">
               <div>
-                <span className="text-2xl font-bold text-text">Full-Stack</span>
-                <p className="text-xs text-muted">Web & Mobile Apps</p>
+                <span className="text-2xl font-bold text-text">React Native</span>
+                <p className="text-xs text-muted">iOS & Android</p>
               </div>
               <div className="h-8 w-px bg-border/80" />
               <div>
-                <span className="text-2xl font-bold text-primary">Gemini & LLMs</span>
-                <p className="text-xs text-muted">AI Integration</p>
+                <span className="text-2xl font-bold text-primary">Expo & TS</span>
+                <p className="text-xs text-muted">Cross-Platform</p>
               </div>
               <div className="h-8 w-px bg-border/80" />
               <div>
-                <span className="text-2xl font-bold text-amber-400">GetCollab</span>
-                <p className="text-xs text-muted">Software Developer Intern</p>
+                <span className="text-2xl font-bold text-amber-400">4+ Apps</span>
+                <p className="text-xs text-muted">Production Shipped</p>
               </div>
             </div>
 
@@ -112,7 +112,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <a href="#projects" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto gap-2 shadow-lg shadow-primary/30 py-3.5">
-                  View Full-Stack Projects
+                  View Mobile Apps
                   <FaArrowRight size={14} />
                 </Button>
               </a>
@@ -183,7 +183,7 @@ export default function Hero() {
               {/* Avatar Image */}
               <img
                 src={profilePic}
-                alt="Najeeb Sayyed - AI & Full-Stack Developer"
+                alt="Najeeb Sayyed - Mobile App Developer"
                 className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-[390px] lg:w-[390px] rounded-full border-4 border-border/80 object-cover shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
               />
 
@@ -193,7 +193,7 @@ export default function Hero() {
                   <FaWandMagicSparkles size={16} />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs font-bold text-text truncate">AI & Full-Stack Developer</p>
+                  <p className="text-xs font-bold text-text truncate">Mobile App Developer</p>
                   <p className="text-[11px] text-muted truncate">GetCollab Intern &bull; Open for Hire</p>
                 </div>
               </div>

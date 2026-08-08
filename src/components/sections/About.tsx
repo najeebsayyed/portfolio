@@ -27,24 +27,24 @@ import { skillsList, skillCategories } from "../../data/skills";
 const features = [
   {
     number: "01",
-    icon: <FaRobot size={22} />,
-    title: "AI Integration & Generative Workflows",
-    description:
-      "Integrating OpenAI and Gemini APIs, prompt pipelines, and autonomous AI agents to build intelligent products.",
-  },
-  {
-    number: "02",
-    icon: <FaCode size={22} />,
-    title: "Full-Stack Web Architecture",
-    description:
-      "Crafting fast, type-safe, and reactive applications using React, TypeScript, Tailwind CSS, and scalable REST APIs.",
-  },
-  {
-    number: "03",
     icon: <FaMobileAlt size={22} />,
     title: "Cross-Platform Mobile Apps",
     description:
-      "Engineering native-speed iOS and Android applications with React Native & Expo with fluid 60fps animations.",
+      "Engineering native-quality iOS & Android applications with React Native, Expo, and fluid 60fps animations — from idea to App Store.",
+  },
+  {
+    number: "02",
+    icon: <FaRobot size={22} />,
+    title: "AI-Powered Mobile Features",
+    description:
+      "Integrating Gemini & OpenAI APIs into mobile apps for intelligent features like smart search, quiz generation, and recipe creation.",
+  },
+  {
+    number: "03",
+    icon: <FaCode size={22} />,
+    title: "Modern Web & Backend",
+    description:
+      "Supporting mobile apps with React web dashboards, Supabase/Firebase backends, and scalable REST APIs.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="mx-auto mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-muted"
           >
-            I bridge the gap between modern full-stack web architectures, cross-platform mobile apps, and Generative AI workflows to create seamless digital products.
+            I specialize in building cross-platform mobile applications with React Native & Expo, backed by modern cloud services and AI-powered features that users love.
           </motion.p>
         </div>
 
