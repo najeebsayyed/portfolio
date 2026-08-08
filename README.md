@@ -35,16 +35,18 @@ Welcome to the official repository for **Najeeb Sayyed's Portfolio Website** —
 
 ## 📱 Highlighted Projects Showcase
 
-1. **[RecipeOS](https://github.com/najeebsayyed/recipe-os)** — *AI-Powered Recipe Mobile App*
+1. **[Calith](https://calith.fit)** — *AI-Powered Calisthenics Platform*
+   - React, TypeScript, Tailwind CSS, AI Coach Engine, Framer Motion.
+2. **[RecipeOS](https://github.com/najeebsayyed/recipe-os)** — *AI-Powered Recipe Mobile App*
    - React Native, Gemini AI API, Supabase Auth & DB, Redux Toolkit.
-2. **[FocusBids](https://focusbids.com)** — *AI-Powered Proposal Intelligence Platform*
+3. **[FocusBids](https://focusbids.com)** — *AI-Powered Proposal Intelligence Platform*
    - React, Gemini AI, Supabase, TypeScript, Tailwind CSS.
-3. **[TeachMate AI](https://github.com/najeebsayyed/teachmate-ai)** — *AI Quiz Platform (Octopus Hackathon Top 50 Finalist)*
+4. **[TeachMate AI](https://github.com/najeebsayyed/teachmate-ai)** — *AI Quiz Platform (Octopus Hackathon Top 50 Finalist)*
    - React Native, Gemini AI API, Redux Toolkit, Expo.
-4. **[Easy Scan](https://github.com/najeebsayyed/easy-scan)** — *Document Scanner & PDF Processing Suite*
-   - React Native, Expo, Camera API, PDF Generation Engine.
-5. **[najeebsayyed.in](https://github.com/najeebsayyed/portfolio)** — *Personal Developer Portfolio*
+5. **[Personal Portfolio](https://github.com/najeebsayyed/portfolio)** — *Personal Developer Portfolio & Web Showcase*
    - React 19, TypeScript, Tailwind CSS, Framer Motion, Vite.
+6. **[Easy Scan](https://github.com/najeebsayyed/easy-scan)** — *Document Scanner & PDF Processing Suite*
+   - React Native, Expo, Camera API, PDF Generation Engine.
 
 ---
 

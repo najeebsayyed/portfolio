@@ -103,7 +103,7 @@ export default function Hero() {
               </div>
               <div className="h-8 w-px bg-border/80" />
               <div>
-                <span className="text-2xl font-bold text-amber-400">4+ Apps</span>
+                <span className="text-2xl font-bold text-amber-400">5+ Apps</span>
                 <p className="text-xs text-muted">Production Shipped</p>
               </div>
             </div>

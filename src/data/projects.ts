@@ -1,5 +1,6 @@
 import recipeos from "../assets/images/recipe-os.png";
 import teachmate from "../assets/images/teachmate.png";
+import calith_web from "../assets/images/calith-web.png";
 import easyscan from "../assets/images/easy-scan.png";
 import focusbids from "../assets/images/focusbids.png";
 import portfolio from "../assets/images/portfolio.png";
@@ -22,6 +23,28 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "Calith.fit",
+    subtitle: "AI-Powered Calisthenics Platform",
+    description:
+      "An adaptive bodyweight training companion web platform to master handstands, muscle-ups, and planche. Features intelligent skill trees, real-time RPE tuning, and zero equipment workouts.",
+    image: calith_web,
+    categories: ["Websites", "AI Powered"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "AI Coach Engine",
+      "Framer Motion",
+    ],
+    live: "https://calith.fit",
+    highlights: [
+      "Intelligent skill tree progressions",
+      "Real-time RPE auto-tuning",
+      "Zero equipment training companion",
+    ],
+  },
+
   {
     title: "RecipeOS",
     subtitle: "AI-Powered Recipe Mobile App",
@@ -51,7 +74,7 @@ export const projects: Project[] = [
     description:
       "An AI-powered platform for agencies and businesses to discover high-value opportunities, understand requirements, and create compelling, tailored proposals faster. Combines AI opportunity analysis with intelligent proposal generation to streamline sales and bidding workflows.",
     image: focusbids,
-    categories: ["AI Powered", "Websites"],
+    categories: ["Websites", "AI Powered"],
     tech: [
       "Gemini AI",
       "Supabase",
@@ -91,6 +114,29 @@ export const projects: Project[] = [
   },
 
   {
+    title: "Personal Portfolio",
+    subtitle: "Personal Developer Portfolio & Web Showcase",
+    description:
+      "A premium, Awwwards-inspired portfolio website built with modern web technologies. Features interactive AI terminal, smooth animations, spotlight effects, responsive mobile-first design, and JSON-LD SEO tags.",
+    image: portfolio,
+    categories: ["Websites"],
+    tech: [
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vite",
+    ],
+    github: "https://github.com/najeebsayyed/portfolio",
+    live: "https://najeebsayyed.in",
+    highlights: [
+      "Interactive AI terminal console",
+      "Premium dark-mode design",
+      "100% responsive & mobile-first",
+    ],
+  },
+
+  {
     title: "Easy Scan",
     subtitle: "Document Scanner & PDF Processing Suite",
     description:
@@ -110,29 +156,6 @@ export const projects: Project[] = [
       "Zero-cloud local processing",
       "Multi-page PDF export",
       "Native camera edge detection",
-    ],
-  },
-
-  {
-    title: "najeebsayyed.in",
-    subtitle: "Personal Developer Portfolio",
-    description:
-      "A premium, Awwwards-inspired portfolio website built with modern web technologies. Features interactive AI terminal, smooth animations, spotlight effects, and a responsive mobile-first design.",
-    image: portfolio,
-    categories: ["Websites"],
-    tech: [
-      "React 19",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Vite",
-    ],
-    github: "https://github.com/najeebsayyed/portfolio",
-    live: "https://najeebsayyed.in",
-    highlights: [
-      "Interactive AI terminal console",
-      "Premium dark-mode design",
-      "100% responsive & mobile-first",
     ],
   },
 ];

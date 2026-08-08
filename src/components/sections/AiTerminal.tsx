@@ -75,24 +75,28 @@ export default function AiTerminal() {
           <div className="space-y-2 text-slate-300">
             <p className="text-secondary font-semibold">🚀 Highlighted Projects:</p>
             <div>
-              <p className="font-bold text-white">1. RecipeOS</p>
+              <p className="font-bold text-white">1. Calith</p>
+              <p className="text-xs text-muted">AI calisthenics training web platform &bull; <span className="text-primary">calith.fit</span></p>
+            </div>
+            <div>
+              <p className="font-bold text-white">2. RecipeOS</p>
               <p className="text-xs text-muted">AI-powered recipe mobile app with Gemini AI, Supabase Auth & Redux Toolkit.</p>
             </div>
             <div>
-              <p className="font-bold text-white">2. FocusBids</p>
-              <p className="text-xs text-muted">AI-powered proposal intelligence platform — <span className="text-primary">focusbids.com</span></p>
+              <p className="font-bold text-white">3. FocusBids</p>
+              <p className="text-xs text-muted">AI-powered proposal intelligence platform &bull; <span className="text-primary">focusbids.com</span></p>
             </div>
             <div>
-              <p className="font-bold text-white">3. TeachMate AI</p>
+              <p className="font-bold text-white">4. TeachMate AI</p>
               <p className="text-xs text-muted">AI quiz platform &bull; Top 50 Finalist in Octopus Hackathon 2025 (900+ teams).</p>
             </div>
             <div>
-              <p className="font-bold text-white">4. Easy Scan</p>
-              <p className="text-xs text-muted">Document scanner suite with PDF export & local file processing.</p>
+              <p className="font-bold text-white">5. Personal Portfolio</p>
+              <p className="text-xs text-muted">Personal developer portfolio & web apps &bull; <span className="text-primary">najeebsayyed.in</span></p>
             </div>
             <div>
-              <p className="font-bold text-white">5. najeebsayyed.in</p>
-              <p className="text-xs text-muted">Personal developer portfolio — <span className="text-primary">najeebsayyed.in</span></p>
+              <p className="font-bold text-white">6. Easy Scan</p>
+              <p className="text-xs text-muted">Document scanner suite with PDF export & local file processing.</p>
             </div>
           </div>
         );
