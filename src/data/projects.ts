@@ -4,6 +4,7 @@ import calith_web from "../assets/images/calith-web.png";
 import easyscan from "../assets/images/easy-scan.png";
 import focusbids from "../assets/images/focusbids.png";
 import portfolio from "../assets/images/portfolio.png";
+import najeebnotes from "../assets/images/najeebs-notes.png";
 
 import recipeosDemo from "../assets/videos/recipe-os.mp4";
 import teachmateDemo from "../assets/videos/teachmate.mp4";
@@ -67,6 +68,51 @@ export const projects: Project[] = [
       "Offline persistence",
     ],
   },
+  {
+    title: "TeachMate AI",
+    subtitle: "AI Quiz Platform (Octopus Hackathon Top 50)",
+    description:
+      "An intelligent quiz generation system that crafts personalized assessments based on custom topics, difficulty levels, and educational grade using Gemini AI APIs. Ranked in the Top 50 projects among 900+ teams in Octopus Hackathon 2025.",
+    image: teachmate,
+    categories: ["Mobile Apps", "AI Powered"],
+    tech: [
+      "React Native",
+      "Gemini AI API",
+      "JavaScript (ES6+)",
+      "Redux Toolkit",
+      "Expo",
+    ],
+    github: "https://github.com/najeebsayyed/teachmate-ai",
+    demo: teachmateDemo,
+    highlights: [
+      "Top 50 / 900+ Hackathon Finalist",
+      "Adaptive difficulty engine",
+      "Instant PDF export",
+    ],
+  },
+
+  {
+    title: "Easy Scan",
+    subtitle: "Document Scanner & PDF Processing Suite",
+    description:
+      "Mobile document scanner application with high-definition document detection, PDF/PNG conversion, multi-page export, and local storage management.",
+    image: easyscan,
+    categories: ["Mobile Apps"],
+    tech: [
+      "React Native",
+      "TypeScript",
+      "PDF Generation Engine",
+      "Native Camera Module",
+      "Expo",
+    ],
+    github: "https://github.com/najeebsayyed/easy-scan",
+    demo: easyscanDemo,
+    highlights: [
+      "Zero-cloud local processing",
+      "Multi-page PDF export",
+      "Native camera edge detection",
+    ],
+  },
 
   {
     title: "FocusBids",
@@ -90,26 +136,25 @@ export const projects: Project[] = [
     ],
   },
 
+
   {
-    title: "TeachMate AI",
-    subtitle: "AI Quiz Platform (Octopus Hackathon Top 50)",
+    title: "Najeeb's Notes",
+    subtitle: "Interactive Sticky Notes Workspace",
     description:
-      "An intelligent quiz generation system that crafts personalized assessments based on custom topics, difficulty levels, and educational grade using Gemini AI APIs. Ranked in the Top 50 projects among 900+ teams in Octopus Hackathon 2025.",
-    image: teachmate,
-    categories: ["Mobile Apps", "AI Powered"],
+      "A highly interactive, glassmorphism-styled sticky notes workspace featuring freeform canvas view, snap-to-grid layouts, rich note templates, voice search dictation, backup/restore capabilities, and a full recycling bin system.",
+    image: najeebnotes,
+    categories: ["Websites"],
     tech: [
-      "React Native",
-      "Gemini AI API",
-      "JavaScript (ES6+)",
-      "Redux Toolkit",
-      "Expo",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
-    github: "https://github.com/najeebsayyed/teachmate-ai",
-    demo: teachmateDemo,
+    github: "https://github.com/najeebsayyed/najeebs-notes",
+    live: "https://najeebs-notes.vercel.app",
     highlights: [
-      "Top 50 / 900+ Hackathon Finalist",
-      "Adaptive difficulty engine",
-      "Instant PDF export",
+      "Freeform canvas navigation & snap-to-grid dynamic positioning",
+      "Real-time voice dictation & smart search/filter indexing",
+      "Full offline support, backup/restore, & recycling bin",
     ],
   },
 
@@ -136,26 +181,5 @@ export const projects: Project[] = [
     ],
   },
 
-  {
-    title: "Easy Scan",
-    subtitle: "Document Scanner & PDF Processing Suite",
-    description:
-      "Mobile document scanner application with high-definition document detection, PDF/PNG conversion, multi-page export, and local storage management.",
-    image: easyscan,
-    categories: ["Mobile Apps"],
-    tech: [
-      "React Native",
-      "TypeScript",
-      "PDF Generation Engine",
-      "Native Camera Module",
-      "Expo",
-    ],
-    github: "https://github.com/najeebsayyed/easy-scan",
-    demo: easyscanDemo,
-    highlights: [
-      "Zero-cloud local processing",
-      "Multi-page PDF export",
-      "Native camera edge detection",
-    ],
-  },
+
 ];
