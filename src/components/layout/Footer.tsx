@@ -53,7 +53,7 @@ export default function Footer() {
                 <h3 className="text-xl font-bold text-text flex items-center gap-2">
                   <span className="text-primary font-mono">&lt;/&gt;</span> Najeeb Sayyed
                 </h3>
-                <p className="mt-1 text-xs text-muted">Mobile App Developer &bull; GetCollab Intern</p>
+                <p className="mt-1 text-xs text-muted">Software Developer &bull; GetCollab Intern</p>
               </button>
             </div>
 

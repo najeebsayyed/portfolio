@@ -28,23 +28,23 @@ const features = [
   {
     number: "01",
     icon: <FaMobileAlt size={22} />,
-    title: "Cross-Platform Mobile Apps",
+    title: "Full-Stack Development",
     description:
-      "Engineering native-quality iOS & Android applications with React Native, Expo, and fluid 60fps animations — from idea to App Store.",
+      "Engineering robust web and mobile applications from end to end with React, Node.js, and modern cloud technologies.",
   },
   {
     number: "02",
     icon: <FaRobot size={22} />,
-    title: "AI-Powered Mobile Features",
+    title: "AI-Powered Solutions",
     description:
-      "Integrating Gemini & OpenAI APIs into mobile apps for intelligent features like smart search, quiz generation, and recipe creation.",
+      "Integrating Gemini & OpenAI APIs into scalable applications for intelligent features like smart search and content generation.",
   },
   {
     number: "03",
     icon: <FaCode size={22} />,
-    title: "Modern Web & Backend",
+    title: "API Design & Integration",
     description:
-      "Supporting mobile apps with React web dashboards, Supabase/Firebase backends, and scalable REST APIs.",
+      "Architecting scalable REST APIs, serverless backends, and robust database architectures using Supabase & Firebase.",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="mx-auto mt-6 max-w-3xl text-base sm:text-lg leading-relaxed text-muted"
           >
-            I specialize in building cross-platform mobile applications with React Native & Expo, backed by modern cloud services and AI-powered features that users love.
+            I specialize in building robust web and mobile applications, creating seamless user experiences and scalable backends.
           </motion.p>
         </div>
 

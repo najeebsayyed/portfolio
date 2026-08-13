@@ -2,7 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 import {
   FaEnvelope,
-  FaLinkedinIn,
+  FaPhone,
   FaPaperPlane,
   FaWandMagicSparkles,
 } from "react-icons/fa6";
@@ -18,7 +18,8 @@ export default function Contact() {
     <Section id="contact" className="relative overflow-hidden py-20 lg:py-28">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute left-1/2 top-0 h-[350px] w-[350px] sm:h-[450px] sm:w-[450px] -translate-x-1/2 rounded-full bg-primary/10 blur-[130px]" />
+        <div className="absolute left-[20%] top-[10%] h-[400px] w-[400px] rounded-full bg-primary/20 blur-[130px]" />
+        <div className="absolute right-[20%] bottom-[10%] h-[400px] w-[400px] rounded-full bg-secondary/15 blur-[130px]" />
       </div>
 
       <Container>
@@ -59,12 +60,12 @@ export default function Contact() {
         {/* Responsive Content Grid */}
         <div className="mt-14 sm:mt-20 grid items-start gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           {/* Contact Cards */}
-          <div className="space-y-4 sm:space-y-5">
+          <div className="space-y-4 sm:space-y-6">
             <a
               href="mailto:najeebsayyed777@gmail.com"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary active:scale-[0.98]"
+              className="group flex items-center gap-4 rounded-3xl border border-border/60 bg-surface/40 backdrop-blur-md p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-surface/80 hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.2)] active:scale-[0.98]"
             >
-              <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
                 <FaEnvelope size={20} />
               </div>
 
@@ -77,25 +78,25 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/najeebsayyed"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-4 rounded-3xl border border-border bg-surface p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary active:scale-[0.98]"
+              href="tel:+910000000000"
+              className="group flex items-center gap-4 rounded-3xl border border-border/60 bg-surface/40 backdrop-blur-md p-4 sm:p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-surface/80 hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.2)] active:scale-[0.98]"
             >
-              <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                <FaLinkedinIn size={20} />
+              <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                <FaPhone size={20} />
               </div>
 
               <div className="min-w-0 flex-1">
-                <p className="text-xs sm:text-sm text-muted">LinkedIn</p>
-                <h4 className="text-sm sm:text-base font-semibold text-text">Najeeb Sayyed</h4>
+                <p className="text-xs sm:text-sm text-muted">Phone</p>
+                <h4 className="text-sm sm:text-base font-semibold text-text">+91 77740 86280</h4>
               </div>
             </a>
 
           </div>
 
           {/* Contact Form Card */}
-          <div className="rounded-[28px] sm:rounded-[32px] border border-border bg-surface p-5 sm:p-8 shadow-xl">
+          <div className="relative rounded-[28px] sm:rounded-[32px] border border-border/50 bg-surface/30 backdrop-blur-xl p-6 sm:p-10 shadow-2xl">
+            {/* Subtle inner glow */}
+            <div className="absolute inset-0 rounded-[28px] sm:rounded-[32px] ring-1 ring-inset ring-white/5 pointer-events-none" />
             {state.succeeded ? (
               <div className="flex min-h-[350px] flex-col items-center justify-center text-center p-4">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-500/10 text-3xl text-green-500">
@@ -122,7 +123,7 @@ export default function Contact() {
                     name="name"
                     required
                     placeholder="e.g. Najeeb Sayyed"
-                    className="w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-colors focus:border-primary placeholder:text-slate-600"
+                    className="w-full rounded-2xl border border-border/50 bg-background/50 px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-all duration-300 focus:border-primary focus:bg-background focus:ring-4 focus:ring-primary/10 placeholder:text-slate-500"
                   />
                 </div>
 
@@ -136,7 +137,7 @@ export default function Contact() {
                     name="email"
                     required
                     placeholder="najeeb@example.com"
-                    className="w-full rounded-2xl border border-border bg-background px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-colors focus:border-primary placeholder:text-slate-600"
+                    className="w-full rounded-2xl border border-border/50 bg-background/50 px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-all duration-300 focus:border-primary focus:bg-background focus:ring-4 focus:ring-primary/10 placeholder:text-slate-500"
                   />
 
                   <ValidationError
@@ -157,7 +158,7 @@ export default function Contact() {
                     name="message"
                     required
                     placeholder="Tell me about your project, idea, or role..."
-                    className="w-full resize-none rounded-2xl border border-border bg-background px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-colors focus:border-primary placeholder:text-slate-600"
+                    className="w-full resize-none rounded-2xl border border-border/50 bg-background/50 px-4 py-3.5 text-base sm:text-sm text-text outline-none transition-all duration-300 focus:border-primary focus:bg-background focus:ring-4 focus:ring-primary/10 placeholder:text-slate-500"
                   />
 
                   <ValidationError

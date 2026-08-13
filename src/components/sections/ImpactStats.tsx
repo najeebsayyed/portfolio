@@ -17,15 +17,15 @@ const stats = [
   },
   {
     icon: <FaBolt className="text-cyan-400" size={24} />,
-    value: "< 500ms",
-    label: "AI Generation Latency",
-    description: "Optimized Gemini API prompt pipelines & caching.",
+    value: "Intern",
+    label: "GetCollab",
+    description: "Working on mobile applications using React Native & Expo.",
   },
   {
     icon: <FaCode className="text-purple-400" size={24} />,
-    value: "4+ Apps",
-    label: "Mobile Apps Shipped",
-    description: "Cross-platform iOS & Android apps in production.",
+    value: "5+",
+    label: "Apps Shipped",
+    description: "Robust web and mobile applications in production.",
   },
 ];
 

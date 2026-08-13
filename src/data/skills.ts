@@ -26,8 +26,8 @@ export const skillCategories = [
   "All",
   "Language",
   "Frontend",
-  "Mobile",
   "Backend & DB",
+  "Mobile",
   "AI & ML",
   "Dev Tools",
 ];

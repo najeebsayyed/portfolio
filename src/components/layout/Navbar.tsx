@@ -11,6 +11,7 @@ import CommandPalette from "../ui/CommandPalette";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [cmdOpen, setCmdOpen] = useState(false);
 
@@ -23,9 +24,20 @@ export default function Navbar() {
   });
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const onScroll = () => {
-      setScrolled(window.scrollY > 20);
-      setShowBackToTop(window.scrollY > 350);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 20);
+      setShowBackToTop(currentScrollY > 350);
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setHidden(true);
+      } else if (currentScrollY < lastScrollY) {
+        setHidden(false);
+      }
+      
+      lastScrollY = currentScrollY;
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
@@ -67,7 +79,11 @@ export default function Navbar() {
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-purple-500 origin-left z-[100] shadow-[0_0_12px_rgba(59,130,246,0.8)]"
       />
 
-      <header className="fixed inset-x-0 top-0 z-50 py-4 transition-all duration-300">
+      <header 
+        className={`fixed inset-x-0 top-0 z-50 py-4 transition-all duration-300 ${
+          hidden ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
+        }`}
+      >
         <Container>
           <div
             className={`flex h-16 items-center justify-between rounded-2xl border px-4 transition-all duration-300 ${

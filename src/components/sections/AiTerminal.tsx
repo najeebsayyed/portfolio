@@ -26,7 +26,7 @@ export default function AiTerminal() {
         <div>
           <p className="text-secondary font-mono">⚡ Welcome to Najeeb's Interactive AI Terminal [v2.4.0]</p>
           <p className="text-muted text-xs mt-1">
-            Type a command or click the preset buttons below to query Najeeb's Mobile App Development specs.
+            Type a command or click the preset buttons below to query Najeeb's Software Development specs.
           </p>
         </div>
       ),
@@ -50,9 +50,9 @@ export default function AiTerminal() {
       case "whoami":
         res = (
           <div className="space-y-1 text-slate-300">
-            <p className="font-bold text-primary">Najeeb Sayyed - Mobile App Developer</p>
+            <p className="font-bold text-primary">Najeeb Sayyed - Software Developer</p>
             <p>&bull; Role: Software Developer Intern @ GetCollab (Remote)</p>
-            <p>&bull; Focus: Building cross-platform mobile apps with React Native, Expo & TypeScript</p>
+            <p>&bull; Focus: Building scalable web and mobile applications with React, Node.js, and modern cloud technologies</p>
             <p>&bull; Code Auditing: Reviewed AI-generated JavaScript & web APIs at Outlier AI</p>
           </div>
         );
